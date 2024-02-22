@@ -39,9 +39,6 @@ def back():
 def text_gpt():
     return(render_template("text_gpt.html"))
 
-@app.route("/back",methods=["GET","POST"])
-def back():
-    return(render_template("back.html"))
 
 
 @app.route("/text_result",methods=["GET","POST"])

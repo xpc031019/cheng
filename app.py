@@ -42,9 +42,9 @@ def introduction():
 def ntu_map():
     return(render_template("ntu_map.html"))
 
-@app.route("/recommended_travel",methods=["GET","POST"])
-def recommended_travel():
-    return(render_template("recommended_travel.html"))
+@app.route("/travel",methods=["GET","POST"])
+def travel():
+    return(render_template("travel.html"))
 
 
 

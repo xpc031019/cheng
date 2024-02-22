@@ -28,11 +28,11 @@ def main():
 
 @app.route("/back",methods=["GET","POST"])
 def back():
-    global r,first_time
-    if first_time==1:
-        r = request.form.get("r")
-        first_time=0
-    return(render_template("back.html",r=r))
+    global a,b
+    if b==1:
+        a = request.form.get("a")
+        b=0
+    return(render_template("back.html",a=a))
 
 
 @app.route("/text_gpt",methods=["GET","POST"])

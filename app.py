@@ -26,13 +26,28 @@ def main():
         first_time=0
     return(render_template("main.html",r=r))
 
-@app.route("/back",methods=["GET","POST"])
-def back():
-    global a,b
-    if b==1:
-        a = request.form.get("a")
-        b=0
-    return(render_template("back.html",a=a))
+@app.route("/ntu",methods=["GET","POST"])
+def ntu():
+    global r,first_time
+    if first_time==1:
+        r = request.form.get("r")
+        first_time=0
+    return(render_template("ntu.html",r=r))
+
+@app.route("/introduction",methods=["GET","POST"])
+def introduction():
+    return(render_template("introduction.html"))
+
+@app.route("/ntu_map",methods=["GET","POST"])
+def ntu_map():
+    return(render_template("ntu_map.html"))
+
+@app.route("/recommended_travel_routes",methods=["GET","POST"])
+def recommended_travel_routes():
+    return(render_template("recommended_travel_routes.html"))
+
+
+
 
 
 @app.route("/text_gpt",methods=["GET","POST"])

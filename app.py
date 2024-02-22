@@ -26,6 +26,14 @@ def main():
         first_time=0
     return(render_template("main.html",r=r))
 
+@app.route("/back",methods=["GET","POST"])
+def back():
+    global r,first_time
+    if first_time==1:
+        r = request.form.get("r")
+        first_time=0
+    return(render_template("back.html",r=r))
+
 
 @app.route("/text_gpt",methods=["GET","POST"])
 def text_gpt():
